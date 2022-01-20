@@ -31,11 +31,19 @@ class Modal extends Component {
                                                     Continue Shopping
                                                 </button>
                                             </Link>
-                                            <Link to="/cart">
-                                                <button className="btn text-yellow" cart onClick={()=> closeModal()}>
+                                            {/* <Link to="/cart">
+                                                <button className="btn text-yellow" cart onClick={()=> closeModal()} >
+                                               
                                                     Go to cart
                                                 </button>
+                                            </Link> */}
+                                            <Link to="/Form">
+                                                <button className="btn btn-secondary me-1" onClick={()=> closeModal()}>
+                                                    form
+                                                </button>
                                             </Link>
+
+
                                         </div>
                                     </div>
                                 </div>
@@ -65,3 +73,8 @@ const ModalContainer = styled.div`
         background : #f3f3f3;
     }
 `;
+
+
+
+
+
