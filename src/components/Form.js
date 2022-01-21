@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { ImageUpload } from 'react-ipfs-uploader'
 
-function Form() {
+const Form = () => {
+  const [imageUrl, setImageUrl] = useState('')
+  
+  
     return (
         <div>
 
@@ -34,19 +38,41 @@ function Form() {
       <div className="form-group my-4">
   <label for="productPic" className="form-label mx-3"> UPLOAD PRODUCT IMAGE</label>
       <br />
-        <input type="file"  name="productPic" required />
+      
       </div>
-<div className="container text-center">
+      
+{/* <div className="container text-center">
   <button className="btn btn-outline-primary">Add Product Image</button>
-</div>
+  
+</div> */}
 
   </div>
-  <button type="submit" className="btn btn-primary">Submit</button>
+  
 </form>
+        
+        <div>
+        <ImageUpload setUrl={setImageUrl} />
+        ImageUrl : <a
+                href={imageUrl}
+                target='_blank'
+                rel='noopener noreferrer'
+            >
+              {imageUrl}  
+
+            </a>
+            </div>
+            
+            <button type="submit" className="btn btn-primary">Submit</button>
+            </div>
         </div>
-          
-        </div>
+        
     )
 }
 
 export default Form;
+
+
+
+
+
+    
